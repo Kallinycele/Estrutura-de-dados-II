@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  float preco;
+    printf("Informe o valor do produto:\t");
+    scanf("%f",&preco);
+
+  if(preco<100){
+    float aumento= (preco * 10)/100;
+    float novoPreco1= aumento + preco;
+    printf("\nO novo preço com uma inflação de 10 porcento é: %.2f reais",novoPreco1);
+  }
+  else{
+    float aumento= (preco * 20)/100;
+    float novoPreco2= aumento + preco;
+    printf("O novo preço com uma inflação de 20 porcento é: %.2f reais",novoPreco2);
+  }
+  
+  return 0;
+}
