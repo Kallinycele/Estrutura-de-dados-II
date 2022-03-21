@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void SomaDivisores(int num){
+    int divisores, soma=0;
+  for(divisores=1; divisores<num; divisores++){
+    if( num % divisores ==0){
+      soma = soma + divisores;
+      printf("%d\t",divisores);
+      }
+    }  
+    printf("\nA soma de seus divisores é: %d\n", soma);
+  }
+
+int main(void) {
+    int i,num;
+  for(i=0; i<5;i++){
+    printf("\n\nInforme um número inteiro positivo: \t");
+    scanf("%d",&num);
+    SomaDivisores(num);
+  }
+ 
+  return 0;
+}
