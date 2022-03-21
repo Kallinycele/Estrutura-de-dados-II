@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+float NotasAluno(float nota1, float nota2, float nota3, char letra){
+  char  A, P, H, Z;
+
+    if(letra=='A'){
+      float mediaArit = (nota1+nota2+nota3)/3;
+      printf("\nMédia aritmétrica das notas é: %.2f", mediaArit);
+      return mediaArit;
+    }
+    else if (letra=='H'){
+      float mediaHarm = 3/((1/nota1)+(1/nota2)+(1/nota3));
+      printf("\nMédia harmônica das notas é: %.2f", mediaHarm);
+      return mediaHarm;   
+      }
+
+   else(letra=='P'){
+      float mediaPond = (nota1*5)+(nota2*3)+(nota3*2)/5+3+2;
+      printf("\nMédia ponderada das notas é: %.2f", mediaPond);
+      return mediaPond;     
+      }
+  
+  return 0;
+}
+
+int main(void) {
+  float nota1,nota2,nota3; 
+  char A, P, H, letra;
+
+   printf("\nInforme a primeira nota do aluno\t");
+    scanf("%f",&nota1);
+    printf("\nInforme a segunda nota do aluno\t");
+    scanf("%f",&nota2);
+    printf("\nInforme a terceira nota do aluno\t");
+    scanf("%f",&nota3);
+
+  
+    printf("\n----------MENU---------\n");
+    printf("A - Média aritmétrica das notas\n");
+    printf("P - Média ponderada das notas\n");
+    printf("H - Média harmônica\n");
+    printf("Z- Sair\n");
+    scanf("%c",&letra);
+  
+    NotasAluno(nota1,nota2,nota3,letra);
+  
+  return 0;
+}
