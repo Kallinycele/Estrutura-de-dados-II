@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+  int num1, num2, op;
+  
+    printf("Informe o primeiro valor: \t");
+    scanf("%d",&num1);
+    printf("\nInforme o segundo valor: \t");
+    scanf("%d",&num2);
+
+    int soma = num1 + num2;
+    int produto = num1 * (num2 * num2);
+    int quadrado= num1 * num1;
+  
+      printf("\n-------------Opções-------------\n");
+      printf("1: Soma dos valores\n");
+      printf("2: O produto do primeiro valor pelo quadrado do segundo\n");
+      printf("3: O quadrado do primeiro valor\n");
+      printf("4: Sair\n");
+      scanf("%d",&op);
+
+  switch(op){
+    case 1:
+      printf("\nA soma dos valores é: %d\n", soma);
+      break;
+    case 2:
+      printf("O produto do primeiro valor pelo quadrado do segundo é: %d\n", produto);
+      break;
+    case 3:
+      printf("O quadrado do primeiro valor é: %d\n", quadrado);
+      break;
+    case 4:
+      break;
+    default:
+      printf("Operação inválida");
+      break;
+  }
+  
+  return 0;
+}
