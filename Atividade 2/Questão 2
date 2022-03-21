@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int potencia(base,expoente){
+    int resul=1,i;
+  for(i=0; i<expoente; i++){
+    resul *= base;
+    }
+    printf("\nO resultade de %d elevado a %d é: %d", base, expoente, resul);
+  return resul;
+}
+
+int main(void) {
+  int base, expoente, res;
+  
+  printf("\nInforme o valor da base:\t");
+  scanf("%d",&base);
+  printf("\nInforme o valor do expoente:\t");
+  scanf("%d",&expoente);
+
+  potencia(base,expoente);
+  
+  return 0;
+}
