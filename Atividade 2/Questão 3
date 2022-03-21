@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int main(void) {
+  printf("Questão incompleta na atividade\n");
+  return 0;
+}
