@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct aluno{
+  char nome[81];
+  char matricula[8];
+  float turma;
+  float p1;
+  float p2;
+  float p3;
+};
+typedef struct aluno Aluno;
+
+void inserirDados(int n, Aluno** tab){
+  int i;
+  tab[i]= (Aluno*) malloc(sizeof(Aluno));
+  printf("\nInforme o nome do aluno: \t");
+  scanf("%s",tab[i]->nome);
+  printf("\nInforme a matricula do aluno: \t");
+  scanf("%s",tab[i]->matricula);
+  printf("\nInforme a turma do aluno: \t");
+  scanf("%f",&tab[i]->turma);
+  printf("\nInforme a nota 1 do aluno: \t");
+  scanf("%f",&tab[i]->p1);
+  printf("\nInforme a nota 2 do aluno: \t");
+  scanf("%f",&tab[i]->p2);
+  printf("\nInforme a nota 3 do aluno: \t");
+  scanf("%f",&tab[i]->p3);
+}
+
+ float imprime_alunos(int n, Aluno** tab){
+   int i;
+  float media= (tab[i]->p1+tab[i]->p2+tab[i]->p3)/3;
+  printf("\nNome do aluno: %s", tab[i]->nome);
+  printf("\nMatricula do aluno: %s",tab[i]->matricula);
+  printf("\nTurma do aluno: %.1f",tab[i]->turma);
+  printf("\nMedia do aluno: %.2f\n",media);
+   return 0;
+   }
+
+float media_turma(int n, Aluno** tab){
+
+    float mediaTotal += media;
+if(n!=0){
+    float mediaTotal= media/n;
+    printf("\nMedia da turma é: %.2f", mediaTotal);
+  return mediaTotal;
+}
+  }
+
+int main(void) {
+  int i;
+  Aluno* tab[2];
+  for(int i=0; i<2; i++){
+  printf("\nDados do aluno %d\n",i+1);
+  inserirDados(2,tab);
+  imprime_alunos(2,tab);
+    }
+  media_turma(i,tab);
+  return 0;
+}
